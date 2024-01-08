@@ -11,7 +11,8 @@ from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper
 
 def main():
-    load_dotenv()
+    os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
+    # load_dotenv()
     # print(os.getenv('OPENAI_API_KEY'))
     st.set_page_config(page_title="My AutoGPT")
     # st.header('My AutoGPT')

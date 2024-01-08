@@ -12,8 +12,12 @@ from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 
 def main():
-    load_dotenv()
+    
+    # print('OPENAI_API_KEY', oak)
+    os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
+    # load_dotenv()
     # print(os.getenv('OPENAI_API_KEY'))
+    # exit()
     st.set_page_config(page_title="Ask PDF")
     st.header('Ask PDF')
 
